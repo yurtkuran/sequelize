@@ -1,7 +1,7 @@
 const Sequelize  = require('sequelize');
-const db = require('../config/database');
+const db         = require('../config/database');
 
-class Gig extends Model {};
+class Gig extends Sequelize.Model {};
 
 Gig.init({
     title: {
@@ -19,6 +19,6 @@ Gig.init({
     contact_email: {
         type: Sequelize.STRING
     },
-}, { sequelize, modelName: 'gig' });
+}, { sequelize: db, modelName: 'gig' });
 
 module.exports = Gig;

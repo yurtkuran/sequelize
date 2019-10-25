@@ -18,7 +18,8 @@ db.authenticate()
 
 app.get('/', (req,res) => res.send('INDEX'));
 
-
+// gig routes
+app.use('/gigs', require('./routes/gigs'));
 
 const PORT = process.env.PORT || 5000;
 

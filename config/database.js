@@ -1,6 +1,6 @@
 const Sequelize  = require('sequelize');
 
-module.exports = new Sequelize('tutorial_passport', 'root', '1candy', {
+module.exports = new Sequelize('tutorial_codegig', 'root', '1candy', {
     host:    'localhost',
     dialect: 'mysql',
     pool: {
