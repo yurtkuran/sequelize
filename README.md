@@ -7,4 +7,5 @@ Original tutorial uses posgres. I used MySQL
 
 
 `install app dependencies: npm i`
+
 `install dev dependencies: npm i -D` 

@@ -6,17 +6,22 @@ const path       = require('path');
 // database
 const db = require('./config/database');
 
-const app = express();
-
-
-
 // test DB
 db.authenticate()
     .then(() => console.log('Database connected...'))
     .catch(err => console.log('Error: '+err));
 
+const app = express();
 
-app.get('/', (req,res) => res.send('INDEX'));
+// handlebars middleware
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+// set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// index route 
+app.get('/', (req,res) => res.render('index', {layout: 'landing'}));
 
 // gig routes
 app.use('/gigs', require('./routes/gigs'));
