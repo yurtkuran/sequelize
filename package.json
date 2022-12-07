@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/yurtkuran/tutorial-traversy-sequelize#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "express-handlebars": "^3.1.0",
     "mysql2": "^1.7.0",
     "sequelize": "^5.21.1"
